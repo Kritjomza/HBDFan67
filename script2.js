@@ -30,7 +30,7 @@ function initHearts() {
     container = new createjs.Container();
     stage.addChild(container);
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 50; i++) {
         const heart = new createjs.Shape();
         heart.graphics.beginFill(createjs.Graphics.getHSL(Math.random() * 30 - 45, 100, 50 + Math.random() * 30));
         heart.graphics.moveTo(0, -12).curveTo(1, -20, 8, -20).curveTo(16, -20, 16, -10)
