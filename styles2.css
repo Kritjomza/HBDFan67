@@ -3,8 +3,25 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
+    background: none; /* Remove static background */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Canvas as Background */
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send canvas to the back */
+}
+
+/* Website Content */
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content appears above the canvas */
+    padding: 20px;
 }
 
 /* Profile Header */
@@ -36,20 +53,23 @@ body, html {
     font-size: 0.9em;
 }
 
-/* Story Container */
+/* Posts */
 .story-container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
-    text-align: center;
 }
 
-/* Scrollable Story Layout */
-.story-scroll {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 0;
+.story-scroll .post {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.story-scroll .post img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 /* Post Style */
@@ -70,7 +90,6 @@ body, html {
 /* Image Style: Square Instagram-like Format */
 .post img {
     width: 100%;
-    max-width: 500px;
     height: 500px;
     object-fit: cover;
     border-radius: 10px;
@@ -103,14 +122,4 @@ body, html {
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
-}
-
-#backgroundCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Place it behind other content */
-    background-color: #312; /* Background color */
 }
