@@ -1,0 +1,48 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Gift Box Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Gift Box Animation */
+.gift-box {
+    position: relative;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+}
+
+.gift-box img {
+    width: 300px;
+}
+
+.gift-box p {
+    font-size: 1.6em;
+    color: #666;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.open-animation {
+    animation: openGiftAnimation 1.5s forwards;
+}
+
+@keyframes openGiftAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(0); opacity: 0; }
+}

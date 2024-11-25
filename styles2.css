@@ -1,0 +1,116 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #ffcccb;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.profile-info p {
+    margin: 2px 0;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Story Container */
+.story-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Scrollable Story Layout */
+.story-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Post Style */
+.post {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 600px;
+}
+
+.post:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Style: Square Instagram-like Format */
+.post img {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Caption and Icons */
+.post-caption {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.post-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.post-icons span {
+    font-size: 1.2em;
+    color: #ff6666;
+    cursor: pointer;
+}
+
+/* Cute Animations */
+.post-icons span:hover {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind other content */
+    background-color: #312; /* Background color */
+}
