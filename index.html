@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reaction Test Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>เกมวัดความไว</h1>
+    <h2>Reaction Test Game</h2>
+    <p>วิธีเล่น: เมื่อเห็นสัญลักษณ์ ให้คลิกเพื่อเก็บคะแนน<br>How to play: Click the symbols to earn points.</p>
+    <button id="startButton" class="start-btn">START</button>
+    <div id="gameArea" class="game-area hidden">
+      <div id="timer" class="timer">60</div>
+      <div id="emoji" class="emoji"></div>
+      <div id="score" class="score">คะแนน: 0</div>
+    </div>
+    <div id="resultArea" class="result-area hidden">
+      <p id="resultMessage"></p>
+      <button id="retryButton" class="retry-btn hidden">ลองใหม่อีกครั้ง</button>
+      <a id="goButton" class="go-btn hidden" href="index1.html">Go!!!!!!</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
