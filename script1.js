@@ -7,6 +7,6 @@ function openGift() {
     music.volume = 0.2;
 
     setTimeout(() => {
-        window.location.href = "index2.html";
+        window.location.href = "index3.html";
     }, 1500);  // Transition after animation
 }
