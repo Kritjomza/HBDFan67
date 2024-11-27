@@ -52,19 +52,19 @@ function showEmoji() {
 function handleEmojiClick(emoji) {
   switch (emoji) {
     case "💗":
-      score += 10;
+      score += 5;
       break;
     case "🌹":
-      score += 1;
+      score += 2;
       break;
     case "🌝":
       score += 1;
       break;
     case "🌕":
-      score -= 1;
+      score -= 2;
       break;
     case "🌓":
-      score -= 1;
+      score -= 2;
       break;
     case "🌗":
       score += 1;
@@ -81,8 +81,8 @@ function endGame() {
   gameArea.classList.add("hidden");
   resultArea.classList.remove("hidden");
 
-  if (score >= 500) {
-    resultMessage.textContent = "คุณเก่งมาก! พร้อมไปต่อได้เลย!";
+  if (score >= 300) {
+    resultMessage.textContent = "เก่งมาก! พร้อมไปต่อได้เลย!";
     goButton.classList.remove("hidden");
   } else {
     resultMessage.textContent = "ลองใหม่นะคับบ😘";
@@ -98,3 +98,19 @@ function resetGame() {
   goButton.classList.add("hidden");
   retryButton.classList.add("hidden");
 }
+
+function endGame() {
+    gameArea.classList.add("hidden");
+    resultArea.classList.remove("hidden");
+  
+    if (score >= 300) {
+      resultMessage.textContent = "คุณเก่งมาก! พร้อมไปต่อได้เลย!";
+      goButton.classList.remove("hidden"); // แสดงปุ่ม Go
+      retryButton.classList.add("hidden"); // ซ่อนปุ่ม Retry
+    } else {
+      resultMessage.textContent = "ลองใหม่นะคับบ😘";
+      retryButton.classList.remove("hidden"); // แสดงปุ่ม Retry
+      goButton.classList.add("hidden"); // ซ่อนปุ่ม Go
+    }
+  }
+  
