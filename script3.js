@@ -1,8 +1,9 @@
-// เลือกดวงดาวทั้งหมด
+// เปิดเพลง
 const music = document.getElementById('music');
 music.muted = false;
-music.play();
 
+
+// ดวงดาว
 const stars = document.querySelectorAll('.star');
 const messageBox = document.getElementById('message-box');
 const messageText = document.getElementById('message-text');
@@ -23,7 +24,7 @@ stars.forEach(star => {
   });
 });
 
-// ปิดข้อความ
+// ปิดกล่องข้อความ
 closeMessage.addEventListener('click', () => {
   messageBox.style.display = 'none';
 });
